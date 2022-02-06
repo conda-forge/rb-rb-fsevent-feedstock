@@ -1,5 +1,5 @@
 {% set name = "rb-fsevent" %}
-{% set version = "0.10.3" %}
+{% set version = "0.11.1" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: a8f78186feb55bb98579b5e0f8dd925ececfde1b5c2496e5e932997ff999a1d2
+  sha256: d585e0211cacbb793b4444e911212b3733f7dfb1c3016cb6c5fcacd8f7058519
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
